@@ -1,0 +1,61 @@
+# Example configuration for HBTS.
+# Every key is optional; anything omitted falls back to the defaults in
+# src/hbts/config.py. Run with:  hbts run --config config/default.yaml
+
+source:
+  camera: 0            # webcam index, or pass --video path/to/file.mp4
+  width: 1280
+  height: 720
+  mirror: true         # selfie view; left/right labels follow the user
+
+modules:
+  face: true
+  hands: true
+  pose: true
+
+blink:
+  close_ratio: 0.72
+  open_ratio: 0.82
+  rate_window: 60.0
+
+fatigue:
+  perclos_window: 60.0
+  perclos_threshold: 0.15
+  microsleep_seconds: 1.0
+  yawn_mar: 0.55
+
+calibration:
+  seconds: 4.0
+
+attention:
+  yaw_tolerance: 22.0
+  pitch_tolerance: 18.0
+  gaze_tolerance: 0.16
+  weights:
+    head: 0.45
+    gaze: 0.35
+    eyes: 0.20
+
+events:
+  distracted_seconds: 3.0
+  slouch_seconds: 8.0
+
+commands:
+  enabled: true
+  hold_seconds: 1.2
+  bindings:
+    Thumb_Up: bookmark
+    Victory: snapshot
+    Open_Palm: toggle_privacy
+    Closed_Fist: toggle_recording
+
+recording:
+  enabled: true
+  dir: sessions
+  sample_hz: 10.0
+
+ui:
+  panel_width: 380
+  show_mesh: true
+  privacy: false
+  fullscreen: false
