@@ -1,3 +1,9 @@
+<!-- profile-card:start -->
+<p align="center">
+  <a href="https://github.com/YashasRajR"><img src="https://raw.githubusercontent.com/YashasRajR/YashasRajR/main/cards/headers/human-behavior-tracking-system.svg" width="100%" alt="Human Behaviour Tracking" /></a>
+</p>
+<!-- profile-card:end -->
+
 # Human Behavior Tracking System
 
 Real-time, multi-modal behaviour analysis from an ordinary webcam. HBTS
